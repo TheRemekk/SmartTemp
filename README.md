@@ -25,29 +25,25 @@ Interfejs webowy zawierający interaktywny wykres, który umożliwia przegląd t
 <a id="l3"></a>
 ## 🖥️ Interfejs użytkownika 
 
-### 🔐 [Ekran logowania](#image1) 
+### 🔐 [Ekran logowania](#image1)
 
-<a id="image1"> 
-    <img src="SmartTemp-fe\images\logowanie.png" width="50%"> 
-</a>
+#### <a id="image1"></a>
+![Ekran logowania](SmartTemp-fe/images/logowanie.png)
 
 ### 📊 [Wykres danych w czasie rzeczywistym](#image2)
 
-<a id="image2"> 
-    <img src="SmartTemp-fe\images\wykres.png" width="75%">
-</a>
+#### <a id="image2"></a>
+![Wykres danych w czasie rzeczywistym](SmartTemp-fe/images/wykres.png)
 
 ### 🔧 [Panel sterowania urządzenia](#image3)
 
-<a id="image3"> 
-    <img src="SmartTemp-fe\images\panel.png" width="50%">
-</a>
+#### <a id="image3"></a>
+![Panel sterowania urządzenia](SmartTemp-fe/images/panel.png)
 
 ### 💻 [Widok całej aplikacji](#image4)
 
-<a id="image4"> 
-    <img src="SmartTemp-fe\images\full_view.png" width="100%">
-</a>
+#### <a id="image4"></a>
+![Widok całej aplikacji](SmartTemp-fe/images/full_view.png)
 
 
 <a id="l4"></a>
