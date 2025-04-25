@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto; /* Wyśrodkowuje na stronie */
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Daje ładne wrażenie głębi */
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+mat-slider {
+  width: 100%;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.label {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.control-button {
+  margin-top: 20px;
+  align-self: stretch; /* Rozciąga przycisk na szerokość kontenera */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.max-width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Kontroler poziomu grzania</h2>
+  <mat-slider
+    [max]="max"
+    [min]="min"
+    [step]="step"
+    [discrete]="thumbLabel">
+    <input matSliderThumb [(ngModel)]="value" />
+  </mat-slider>
+  <div class="slider-labels">
+    <span *ngFor="let point of sliderPoints" class="label">
+      {{ point }}
+    </span>
+  </div>
+  <button mat-raised-button color="primary" class="control-button" (click)="setLevel()">
+    Ustaw <mat-icon>thermostat</mat-icon>
+  </button>
+  <div class='alert alert-warning alert-dismissible fade show mt-2 max-width' role='alert' *ngIf='error'>
+    {{ error }}
+  </div>
+  <div class='alert alert-success alert-dismissible fade show mt-2 max-width' role='alert' *ngIf='info'>
+    {{ info }}
+  </div>
+</div>

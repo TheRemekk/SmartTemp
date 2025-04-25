@@ -1,0 +1,51 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 70% 30%; /* Główne kolumny: 70% dla lewej, 30% dla prawej */
+  grid-template-rows: 40% 60%; /* Wysokość prawej kolumny: 30% dla controller, 70% dla sensors */
+  height: 100vh; /* Wysokość całego widoku */
+  gap: 15px; /* Przestrzenie między komponentami */
+
+  /* Dodaj estetyczne ramki dla oddzielenia komponentów */
+  & > * {
+    border: 1px solid #ccc; /* Szary obramowanie */
+    border-radius: 8px; /* Zaokrąglone rogi */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lekki cień dla estetyki */
+    padding: 10px; /* Wewnętrzny odstęp */
+    background-color: #fff; /* Białe tło */
+  }
+
+  .chart {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3; /* Zajmuje całą lewą kolumnę */
+    min-width: 300px; /* Minimalna szerokość */
+  }
+
+  .controller {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2; /* Zajmuje górną część w prawej kolumnie */
+    min-height: 100px; /* Minimalna wysokość */
+  }
+
+  .sensors {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; /* Zajmuje dolną część w prawej kolumnie */
+    display: flex; /* Aby dopasować zawartość */
+    flex-direction: column;
+    overflow: auto; /* Przewijanie, gdy zawartość przekroczy wysokość */
+  }
+
+  /* Ustawienia siatki poniżej 1200px */
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr; /* Tylko jedna kolumna */
+    grid-template-rows: auto; /* Wysokość zależna od zawartości */
+
+    .chart,
+    .controller,
+    .sensors {
+      grid-column: 1 / 2; /* Każdy element zajmuje całą szerokość */
+      grid-row: auto; /* Układ komponentów jeden pod drugim */
+    }
+
+    height: auto; /* Dostosowanie wysokości siatki */
+  }
+}

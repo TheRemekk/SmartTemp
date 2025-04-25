@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Zakres czasowy</mat-label>
+    <mat-date-range-input [formGroup]="range" [rangePicker]="picker" name="dateRange">
+      <input matStartDate formControlName="start" placeholder="Data początkowa" name="start">
+      <input matEndDate formControlName="end" placeholder="Data końcowa" name="end">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+
+    <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Niepoprawna data początkowa</mat-error>
+    <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Niepoprawna data końcowa</mat-error>
+  </mat-form-field>
+
+  <mat-checkbox [(ngModel)]="temperatureChecked" name="temp">Temperatura</mat-checkbox>
+  <mat-checkbox [(ngModel)]="humidityChecked" name="mois">Wilgotność</mat-checkbox>
+  <mat-checkbox [(ngModel)]="levelChecked" name="level">Poziom</mat-checkbox>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Czujniki</mat-label>
+    <mat-select [(ngModel)]="selectedSensors" (selectionChange)="onValueChange($event)" name="sensors">
+      <mat-option *ngFor="let sensor of sensors" [value]="sensor.name">
+        {{ sensor.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Wyświetl wykres</button>
+</form>
+
+<div id="chart"></div>

@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Kontroler poziomu grzania</h2>
+  <div class="toggle-buttons">
+    <button mat-raised-button
+            [ngStyle]="{ 'background-color': value ? '#3F51B6' : '#b7bbc4', 'color': value ? 'white' : 'black' }"
+      class="toggle-button"
+      [class.active]="value === 1"
+      (click)="setValue(1)">
+      ON
+    </button>
+    <button mat-raised-button
+            [ngStyle]="{ 'background-color': value ? '#b7bbc4' : '#3F51B6', 'color': value ? 'black' : 'white'}"
+      class="toggle-button"
+      [class.active]="value === 0"
+      (click)="setValue(0)">
+      OFF
+    </button>
+  </div>
+  <button mat-raised-button color="primary" class="control-button" (click)="setLevel()">
+    Ustaw <mat-icon>thermostat</mat-icon>
+  </button>
+  <div class='alert alert-warning alert-dismissible fade show mt-2 max-width' role='alert' *ngIf='error'>
+    {{ error }}
+  </div>
+  <div class='alert alert-success alert-dismissible fade show mt-2 max-width' role='alert' *ngIf='info'>
+    {{ info }}
+  </div>
+</div>

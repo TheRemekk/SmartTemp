@@ -1,0 +1,42 @@
+<form [formGroup]='registerForm' (ngSubmit)='onRegister()'>
+  <div class='form-input'>
+    <mat-form-field appearance='fill'>
+      <mat-label>Login</mat-label>
+      <input matInput [formControl]='controls.login'>
+      <mat-error *ngIf='controls.login.invalid'>{{ getErrorMessage(controls.login) }}</mat-error>
+    </mat-form-field>
+  </div>
+  <div class='form-input'>
+    <mat-form-field appearance='fill'>
+      <mat-label>Hasło</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" [formControl]='controls.password'>
+      <mat-error *ngIf='controls.password.invalid'>{{ getErrorMessage(controls.password) }}</mat-error>
+      <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div class='form-input'>
+    <mat-form-field appearance='fill'>
+      <mat-label>Powtórz hasło</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" [formControl]='controls.repeatedPassword'>
+      <mat-error *ngIf='controls.repeatedPassword.invalid'>{{ getErrorMessage(controls.repeatedPassword) }}</mat-error>
+      <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div class='d-flex justify-content-end'>
+    <button mat-raised-button color='primary' [disabled]='registerForm.invalid'>Zarejestruj się</button>
+  </div>
+  <div class='alert alert-warning alert-dismissible fade show mt-2' role='alert' *ngIf='notMatchingPasswordsErr'>
+    {{ notMatchingPasswordsErr}}
+    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close' (click)='notMatchingPasswordsErr = null'></button>
+  </div>
+  <div class='alert alert-warning alert-dismissible fade show mt-2' role='alert' *ngIf='errorMsg$ | async as error'>
+    {{ error }}
+  </div>
+  <div class='mt-2' *ngIf='loading$ | async'>
+    Aktualnie trwa zapytanie HTTP...
+  </div>
+</form>
