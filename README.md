@@ -1,8 +1,8 @@
 # Smart Temp 🌡️ - system do monitorowania i sterowania temperaturą (IoT)
 
 ### Autorzy wykonanego projektu: 
-* [Remigiusz Janicki](https://github.com/TheRemekk) 
-* [Wojciech Gunia](https://github.com/wojciechgunia)
+<img src="https://skillicons.dev/icons?i=github" height="25" alt="github logo"/> [Remigiusz Janicki](https://github.com/TheRemekk)<br>
+<img src="https://skillicons.dev/icons?i=github" height="25" alt="github logo"/> [Wojciech Gunia](https://github.com/wojciechgunia)
 
 ## 📖 Spis treści
 
@@ -30,25 +30,25 @@ Interfejs zawiera interaktywny wykres, który umożliwia przegląd temperatury, 
 <a id="l3"></a>
 ## 🖥️ Interfejs użytkownika 
 
-### 🔐 [Ekran logowania](#image1)
+<details>
+  <summary>🔐 Ekran logowania</summary>
+  <img src="SmartTemp-fe/images/logowanie.png" alt="Ekran logowania"/>
+</details>
 
-#### <a id="image1"></a>
-![Ekran logowania](SmartTemp-fe/images/logowanie.png)
+<details>
+  <summary>📊 Wykres danych w czasie rzeczywistym</summary>
+  <img src="SmartTemp-fe/images/wykres.png" alt="Wykres danych w czasie rzeczywistym"/>
+</details>
 
-### 📊 [Wykres danych w czasie rzeczywistym](#image2)
+<details>
+  <summary>🔧 Panel sterowania urządzenia</summary>
+  <img src="SmartTemp-fe/images/panel.png" alt="Panel sterowania urządzenia"/>
+</details>
 
-#### <a id="image2"></a>
-![Wykres danych w czasie rzeczywistym](SmartTemp-fe/images/wykres.png)
-
-### 🔧 [Panel sterowania urządzenia](#image3)
-
-#### <a id="image3"></a>
-![Panel sterowania urządzenia](SmartTemp-fe/images/panel.png)
-
-### 💻 [Widok całej aplikacji](#image4)
-
-#### <a id="image4"></a>
-![Widok całej aplikacji](SmartTemp-fe/images/full_view.png)
+<details>
+  <summary>💻 Widok całej aplikacji</summary>
+  <img src="SmartTemp-fe/images/full_view.png" alt="Widok całej aplikacji"/>
+</details>
 
 
 <a id="l4"></a>
