@@ -1,6 +1,6 @@
 # Smart Temp 🌡️ - Temperature monitoring and control (IoT) system
 
-### Authors of the completed project:
+### 👥 Authors of the completed project:
 * [Remigiusz Janicki](https://github.com/TheRemekk) 
 * [Wojciech Gunia](https://github.com/wojciechgunia)
 
