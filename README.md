@@ -2,7 +2,7 @@
 
 # Smart Temp 🌡️ - system do monitorowania i sterowania temperaturą (IoT)
 
-### Autorzy wykonanego projektu: 
+### 👥 Autorzy wykonanego projektu: 
 <img src="https://skillicons.dev/icons?i=github" height="25" alt="github logo"/> [Remigiusz Janicki](https://github.com/TheRemekk)<br>
 <img src="https://skillicons.dev/icons?i=github" height="25" alt="github logo"/> [Wojciech Gunia](https://github.com/wojciechgunia)
 
