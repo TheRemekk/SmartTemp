@@ -1,3 +1,5 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/TheRemekk/SmartTemp/blob/master/README-en.md)
+
 # Smart Temp 🌡️ - system do monitorowania i sterowania temperaturą (IoT)
 
 ### Autorzy wykonanego projektu: 
